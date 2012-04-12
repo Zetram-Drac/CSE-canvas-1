@@ -18,7 +18,26 @@
 			
 			canvas.addEventListener('mousemove', function(event) {
 				console.log('mousemove at (%o, %o)', event.offsetX, event.offsetY);
+		      drawCircle(event.offsetX, event.offsetY,5);
+			
 			});
+			
+			function drawCircle(x, y, radius, color)
+			{
+				
+				// draw a circle and fill it in
+				ctx.beginPath();
+				ctx.arc(x, y, radius, 0, Math.PI*2, true);
+				ctx.closePath();
+				
+				// set the fill color to black
+				ctx.fillStyle= color || "#000000";
+				ctx.fill();
+			}
+			
+			
+			
+			
 			
 		</script>
 	</body>
